@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
+    kotlin("plugin.serialization") version libs.versions.kotlinx.ver
 }
 
 android {
@@ -69,5 +70,7 @@ dependencies {
     implementation(libs.androidx.room.paging)
     kapt(libs.room.compiler)
     implementation(libs.material3)
+    implementation(libs.kotlinx.serialization.json)
+
 
 }
