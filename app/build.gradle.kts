@@ -19,6 +19,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_KEY", "${properties["API_KEY"]}")
+
+
     }
 
     buildTypes {
@@ -29,6 +33,9 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+    buildFeatures {
+        buildConfig=true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
