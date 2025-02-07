@@ -1,8 +1,14 @@
 package com.example.paging3jetpackcompose.model
 
-import kotlinx.serialization.SerialName
+import androidx.room.Embedded
+import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class User(
-    @SerialName("regular")
-    val regular:String?=null
+    @SerializedName("links")
+    @Embedded
+    val userLinks:UserLinks?=null,
+    @SerializedName("username")
+    val userName:String?=null
 )
