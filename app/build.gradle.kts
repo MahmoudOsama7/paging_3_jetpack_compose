@@ -21,6 +21,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "API_KEY", "${properties["API_KEY"]}")
+        buildConfigField("String", "BASE_URL", "${properties["BASE_URL"]}")
 
 
     }
@@ -78,6 +79,9 @@ dependencies {
     kapt(libs.room.compiler)
     implementation(libs.material3)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
+
+
 
 
 }
