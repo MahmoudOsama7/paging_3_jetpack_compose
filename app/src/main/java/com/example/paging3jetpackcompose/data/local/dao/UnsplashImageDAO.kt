@@ -13,7 +13,7 @@ interface UnsplashImageDAO {
     fun getAllImages():PagingSource<Int,UnsplashImage>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addImage(images:List<UnsplashImage>)
+    fun addImages(images:List<UnsplashImage>)
 
     @Query("DELETE FROM `unsplash-image-table`")
     fun deleteAllImages():PagingSource<Int,UnsplashImage>
